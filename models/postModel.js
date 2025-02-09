@@ -3,10 +3,14 @@ const { Schema } = mongoose;
 
 const PostSchema = new Schema(
   {
-    title: { type: String, required: true },
-    content: { type: String, required: true },
-    infoTitle: { type: String },
-    infoContent: { type: String },
+    titleMn: { type: String, required: true },
+    contentMn: { type: String, required: true },
+    infoTitleMn: { type: String },
+    infoContentMn: { type: String },
+    titleEn: { type: String, required: true },
+    contentEn: { type: String, required: true },
+    infoTitleEn: { type: String },
+    infoContentEn: { type: String },
     createdAt: { type: Date, default: Date.now },
     imageUrl: { type: String },
   },

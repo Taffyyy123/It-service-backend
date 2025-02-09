@@ -41,11 +41,12 @@ const deleteService = async (req, res) => {
 const updateService = async (req, res) => {
   try {
     const serviceId = req.params.serviceId;
-    const { infoImg, subTitle, caption, price } = req.body;
+    const { infoImg, subTitleMn, captionMn, subTitleEn, captionEn, price } =
+      req.body;
 
     const updatedService = await serviceModel.findByIdAndUpdate(
       serviceId,
-      { infoImg, subTitle, caption, price },
+      { infoImg, subTitleMn, captionMn, subTitleEn, captionEn, price },
       { new: true }
     );
 

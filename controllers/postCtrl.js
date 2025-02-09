@@ -38,11 +38,11 @@ const getPostById = async (req, res) => {
 const updatePost = async (req, res) => {
   try {
     const postId = req.params.postId;
-    const { title, content, imageUrl } = req.body;
+    const { titleMn, contentMn, titleEn, contentEn, imageUrl } = req.body;
 
     const updatedPost = await Post.findByIdAndUpdate(
       postId,
-      { title, content, imageUrl },
+      { titleMn, contentMn, titleEn, contentEn, imageUrl },
       { new: true }
     );
 
